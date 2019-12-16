@@ -105,9 +105,9 @@
                     <tr>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->description }}</td>
-                        {{-- <td>
+                        <td>
                             <a href="/editproduct/{{ $data->id }}" >Edit</a>
-                        </td> --}}
+                        </td> 
                         <td>
                             <a href="/deleteproduct/{{ $data->id }}" >Delete</a>
                         </td>

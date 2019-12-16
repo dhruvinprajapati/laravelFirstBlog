@@ -80,10 +80,14 @@ class ProductController extends Controller
      */
     public function update(Request $request)
     {
-        $saved = product::where('id','=',$request->id)->update(['name' => $request->name,'description'=>$request->description]);
+        $saved = product::where('id','=',$request->id)
+        ->update(['name' => $request->name, 'description'=>$request->description]);
 
         if($saved){
             return redirect('about');
+        }
+        elseif(!$saved){
+            return redirect('about')->with('message','Data not saved');
         }
     }
 
